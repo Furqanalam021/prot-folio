@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c%8w$sr%wjp-4j3uz=n7l+z-4t7)rlym$m+atsvnf_tq22dx5*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["prot-folio.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -120,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+CSRF_TRUSTED_ORIGINS = [
+    "https://prot-folio.onrender.com",
+]
