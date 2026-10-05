@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'project',
     'education',
     'contact',
+    # 'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
 CSRF_TRUSTED_ORIGINS = [
     "https://prot-folio.onrender.com",
 ]
