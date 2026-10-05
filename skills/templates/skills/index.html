@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static "skills/style.css" %}">
+    <title>Furqan Alam | Python Full Stack Developer</title>
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                FURQAN ALAM
+            </div>
+
+            <div class="nav-links">
+                {% comment %} <a href="/">Home</a> {% endcomment %}
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="{% url 'project' %}">Projects</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'contact' %}">contact</a>
+                {% comment %} <a href="#contact">Contact</a> {% endcomment %}
+
+    <!-- LinkedIn -->
+    <a class="l" href="https://www.linkedin.com/in/furqan-alam-432057374/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="g" href="https://github.com/Furqanalam021" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</nav>
+    </header>
+    <h1>Skills & Technologies</h1>
+    <p>I have developed a strong foundation in full-stack web development, with hands-on experience in building responsive front-end interfaces, developing backend applications, working with databases, and integrating REST APIs.
+I enjoy learning new technologies and applying my skills to build practical and user-friendly web applications.</p>
+    <div>
+        <h2>languages</h2>
+        <ol>
+            <li>Python</li>
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+        </ol>
+    </div>
+    <div>
+        <h2>frameworks</h2>
+        <ol>
+            <li>Flask</li>
+            <li>Django</li>
+            <li>Bootstrap</li>
+        </ol>
+    </div>
+    <div>
+        <h2>APIs</h2>
+        <ol>
+            <li>RESTful APIs Design & integration</li>
+        </ol>
+    </div>
+    <div>
+        <h2>Database</h2>
+        <ol>
+            <li>MY SQL</li>
+            <li>SQL Server</li>
+        </ol>
+    </div>
+    <div>
+        <h2>Tools</h2>
+        <ol>
+            <li>VS Code</li>
+            <li>Git & Github</li>
+            <li>MySQL Workbench</li>
+        </ol>
+    </div>
+</body>
+</html>

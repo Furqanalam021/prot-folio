@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'contact/style.css' %}">
+    <title>Furqan Alam | Python Full Stack Developer</title>
+</head>
+<body>
+     <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                FURQAN ALAM
+            </div>
+
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'skills' %}">Skills</a>
+                <a href="{% url 'project' %}">Projects</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="#contact">contact</a>
+                {% comment %} <a href="#contact">Contact</a> {% endcomment %}
+
+    <!-- LinkedIn -->
+    <a class="l" href="https://www.linkedin.com/in/furqan-alam-432057374/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="g" href="https://github.com/Furqanalam021" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</nav>
+    </header>
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                Contact Me
+            </h1>
+
+            <p class="contact-intro">
+                Have a question, project idea, or opportunity?
+                Feel free to get in touch with me.
+            </p>
+
+
+            <form class="contact-form" method="POST">
+
+                {% csrf_token %}
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Age -->
+
+                <div class="form-group">
+
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        placeholder="Enter your age"
+                        min="1"
+                        max="100"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Gender -->
+
+                <div class="form-group">
+
+                    <label for="gender">
+                        Gender
+                    </label>
+
+                    <select id="gender" name="gender" required>
+
+                        <option value="" disabled selected>
+                            Select your gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                        <option value="Prefer not to say">
+                            Prefer not to say
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Message -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+</body>
+</html>

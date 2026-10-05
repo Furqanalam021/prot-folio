@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'education/style.css' %}">
+    <title>Furqan Alam | Python Full Stack Developer</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                FURQAN ALAM
+            </div>
+
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'skills' %}">Skills</a>
+                <a href="{% url 'project' %}">Projects</a>
+                <a href="#education">Education</a>
+                <a href="{% url 'contact' %}">contact</a>
+                {% comment %} <a href="#contact">Contact</a> {% endcomment %}
+
+    <!-- LinkedIn -->
+    <a class="l" href="https://www.linkedin.com/in/furqan-alam-432057374/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="g" href="https://github.com/Furqanalam021" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</nav>
+    </header>
+
+    <!-- ================================
+         EDUCATION SECTION
+    ================================= -->
+
+    <section id="education" class="education-section">
+
+        <div class="education-container">
+
+            <p class="section-label">
+                MY JOURNEY
+            </p>
+
+            <h1>
+                Education & Training
+            </h1>
+
+            <p class="education-intro">
+                My academic background and practical training have helped
+                me build a strong foundation in full-stack web development
+                and prepare for real-world software development.
+            </p>
+
+
+            <!-- ================================
+                 EDUCATION / TRAINING
+            ================================= -->
+
+            <div class="education-list">
+
+
+                <!-- BCA -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        01
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-type">
+                            EDUCATION
+                        </span>
+
+                        <h2>
+                            Bachelor of Computer Applications (BCA)
+                        </h2>
+
+                        <h3>
+                            Dharwad University, Karnataka
+                        </h3>
+
+                        <p>
+                            Completed my Bachelor of Computer Applications
+                            with a focus on computer science and software
+                            development fundamentals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Python Full Stack -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        02
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-type">
+                            PROFESSIONAL TRAINING
+                        </span>
+
+                        <h2>
+                            Python Full Stack Development
+                        </h2>
+
+                        <h3>
+                            Fortune Cloud Technologies
+                        </h3>
+
+                        <p>
+                            Completed Python Full Stack Development training,
+                            gaining practical knowledge of frontend,
+                            backend, databases and web application development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cravita Technology -->
+
+                <div class="education-card">
+
+                    <div class="education-icon">
+                        03
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-type">
+                            INTERNSHIP
+                        </span>
+
+                        <h2>
+                            Full Stack Development Intern
+                        </h2>
+
+                        <h3>
+                            Cravita Technology
+                        </h3>
+
+                        <p>
+                            Completed a Full Stack Development internship
+                            with practical exposure to developing and
+                            working on web applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

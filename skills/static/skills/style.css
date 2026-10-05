@@ -1,0 +1,425 @@
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(0, 229, 255, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(124, 77, 255, 0.08),
+            transparent 30%
+        ),
+        #070b14;
+
+    color: #ffffff;
+
+    padding: 80px 5%;
+}
+
+
+/* ========================================
+   MAIN HEADING
+======================================== */
+
+body > h1 {
+    text-align: center;
+
+    font-size: clamp(38px, 6vw, 60px);
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+}
+
+
+/* Cyan line below heading */
+
+body > h1::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    margin: 18px auto 0;
+
+    background: #00e5ff;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+body > p {
+    max-width: 780px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+
+    color: #9da8ba;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   SKILLS CARDS CONTAINER
+======================================== */
+
+body > div {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 25px;
+
+    padding: 30px;
+
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Top glowing line */
+
+body > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 30px;
+    right: 30px;
+
+    height: 2px;
+
+    background: #00e5ff;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+
+/* Card hover */
+
+body > div:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-color: rgba(0, 229, 255, 0.3);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+body > div:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* ========================================
+   CATEGORY HEADINGS
+======================================== */
+
+body > div h2 {
+    margin-bottom: 20px;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-transform: capitalize;
+}
+
+
+/* Small cyan indicator */
+
+body > div h2::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+    height: 22px;
+
+    margin-right: 12px;
+
+    vertical-align: -4px;
+
+    background: #00e5ff;
+
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   LIST
+======================================== */
+
+body > div ol {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    list-style: none;
+}
+
+
+/* ========================================
+   SKILL ITEMS
+======================================== */
+
+body > div li {
+    padding: 11px 17px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 10px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Skill hover */
+
+body > div li:hover {
+    color: #00e5ff;
+
+    background: rgba(0, 229, 255, 0.07);
+
+    border-color: rgba(0, 229, 255, 0.4);
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   SPECIAL API ITEM
+======================================== */
+
+body > div:nth-of-type(3) li {
+    color: #b9c5d6;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 60px 5%;
+    }
+
+    body > h1 {
+        font-size: 40px;
+    }
+
+    body > p {
+        font-size: 15px;
+
+        margin-bottom: 45px;
+    }
+
+    body > div {
+        padding: 25px;
+
+        margin-bottom: 20px;
+    }
+
+    body > div ol {
+        gap: 9px;
+    }
+
+    body > div li {
+        font-size: 13px;
+
+        padding: 9px 13px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 45px 18px;
+    }
+
+    body > h1 {
+        font-size: 34px;
+    }
+
+    body > p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    body > div {
+        padding: 22px;
+
+        border-radius: 15px;
+    }
+
+    body > div h2 {
+        font-size: 19px;
+    }
+
+    body > div li {
+        width: 100%;
+
+        text-align: center;
+    }
+}
+/* ================================
+   HEADER / NAVBAR
+================================ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(7, 11, 20, 0.75);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo */
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #00e5ff;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #d8deea;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+}
+
+
+/* Underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #00e5ff;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+

@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furqan Alam | Python Full Stack Developer</title>
+    <link rel="stylesheet"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                FURQAN ALAM
+            </div>
+
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="{% url 'skills' %}">Skills</a>
+                <a href="{% url 'project' %}">Projects</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'contact' %}">contact</a>
+                {% comment %} <a href="#contact">Contact</a> {% endcomment %}
+
+    <!-- LinkedIn -->
+    <a class="l" href="https://www.linkedin.com/in/furqan-alam-432057374/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="g" href="https://github.com/Furqanalam021" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="home">
+
+        <div class="home-content">
+
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>
+                Hi, I'm <span>Furqan Alam</span>
+            </h1>
+
+            <h2>Python Full Stack Developer</h2>
+
+            <p>
+                I build modern, responsive and user-friendly web applications
+                using Python and modern web technologies.
+            </p>
+
+            <p>
+                I'm passionate about full-stack development and continuously
+                improving my skills by building real-world projects.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn">View My Projects</a>
+                <a href="#" class="btn resume">Download Resume</a>
+            </div>
+
+            <div class="technologies">
+                <span>Python</span>
+                <span>Django</span>
+                <span>Flask</span>
+                <span>ReactJS</span>
+                <span>JavaScript</span>
+                <span>MySQL</span>
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="foot">
+        <div>
+            <ul>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

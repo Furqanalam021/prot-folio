@@ -1,0 +1,439 @@
+/* ========================================
+   PROJECTS SECTION
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.projects-section {
+    position: relative;
+
+    padding: 110px 5%;
+
+    background: #070b14;
+
+    overflow: hidden;
+}
+
+
+/* Background glow */
+
+.projects-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: -200px;
+    top: 20%;
+
+    background: #00e5ff;
+
+    border-radius: 50%;
+
+    filter: blur(180px);
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+
+/* Container */
+
+.projects-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    
+
+    text-align: center;
+}
+
+
+/* Small title */
+
+.section-label {
+    color: #00e5ff;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Heading */
+
+.projects-container h2 {
+    color: #ffffff;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+/* Introduction */
+
+.projects-intro {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    color: #757f90;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   PROJECT GRID
+======================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   PROJECT CARD
+======================================== */
+
+.project-card {
+    position: relative;
+
+    padding: 35px;
+
+    min-height: 390px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(238, 5, 5, 0.111);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(14px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Number */
+
+.project-number {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-size: 55px;
+
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, 0.04);
+
+    line-height: 1;
+}
+
+
+/* Hover */
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0, 229, 255, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Content */
+
+.project-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Project title */
+
+.project-content h3 {
+    color: #ffffff;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Description */
+
+.project-content p {
+    color: #9da8ba;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   TECHNOLOGIES
+======================================== */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 30px;
+}
+
+.project-tech span {
+    padding: 7px 12px;
+
+    color: #cbd5e1;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.project-tech span:hover {
+    color: #00e5ff;
+
+    border-color: rgba(0, 229, 255, 0.4);
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.project-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+.project-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    background: #00e5ff;
+
+    color: #061018;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 229, 255, 0.2);
+}
+
+
+/* Secondary button */
+
+.project-btn.secondary {
+    color: #d8deea;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.project-btn.secondary:hover {
+    color: #00e5ff;
+
+    border-color: rgba(0, 229, 255, 0.4);
+
+    box-shadow: none;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .projects-section {
+        padding: 85px 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .projects-container {
+        width: 100%;
+    }
+
+    .projects-container h2 {
+        font-size: 34px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-content h3 {
+        font-size: 21px;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        width: 100%;
+    }
+}
+/* ================================
+   HEADER / NAVBAR
+================================ */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(7, 11, 20, 0.75);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo */
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #00e5ff;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #d8deea;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+}
+
+
+/* Underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #00e5ff;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}

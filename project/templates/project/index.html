@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'project/style.css' %}">
+    <title>Furqan Alam | Python Full Stack Developer</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                FURQAN ALAM
+            </div>
+
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'skills' %}">Skills</a>
+                <a href="#project">Projects</a>
+                <a href="{% url 'education' %}">Education</a>
+                <a href="{% url 'contact' %}">contact</a>
+                {% comment %} <a href="#contact">Contact</a> {% endcomment %}
+
+    <!-- LinkedIn -->
+    <a class="l" href="https://www.linkedin.com/in/furqan-alam-432057374/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a class="g" href="https://github.com/Furqanalam021" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+</div>
+</nav>
+    </header>
+<!-- ================================
+     PROJECTS SECTION
+================================ -->
+
+<section id="projects" class="projects-section">
+
+    <div class="projects-container">
+
+        <p class="section-label">MY WORK</p>
+
+        <h2>Featured Projects</h2>
+
+        <p class="projects-intro">
+            Here are some of the projects I have built while developing
+            my skills in full-stack web development.
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- ================================
+                 PROJECT 1
+            ================================= -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Bus Ticket Booking System</h3>
+
+                    <p>
+                        A web-based bus ticket booking system that allows
+                        users to view available buses, routes and seats,
+                        and book tickets online. The system also provides
+                        management features for buses, routes and
+                        availability.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        {% comment %} <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                        <a href="#" class="project-btn secondary">
+                            GitHub
+                        </a> {% endcomment %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================
+                 PROJECT 2
+            ================================= -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Hotel Management System</h3>
+
+                    <p>
+                        A web-based hotel management system designed to
+                        manage hotel booking information and provide a
+                        simple and user-friendly interface for handling
+                        hotel-related operations.
+                    </p>
+
+
+                    <div class="project-tech">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>MySQL</span>
+
+                    </div>
+
+
+                    {% comment %} <div class="project-buttons">
+
+                        <a href="#" class="project-btn">
+                            View Project
+                        </a>
+
+                        <a href="#" class="project-btn secondary">
+                            GitHub
+                        </a> {% endcomment %}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
